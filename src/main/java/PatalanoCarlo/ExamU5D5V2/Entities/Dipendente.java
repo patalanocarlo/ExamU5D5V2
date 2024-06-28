@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -24,9 +23,8 @@ public class Dipendente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @NotBlank(message = "Devi inserire uno username")
-    @Size(min = 3,max = 10,message ="Lo username scelto deve avere minimo 3 caratteri e massimo 10" )
+    @Size(min = 3, max = 10, message = "Lo username scelto deve avere minimo 3 caratteri e massimo 10")
     private String username;
 
     @NotBlank(message = "Il nome è sempre richiesto")
@@ -36,13 +34,12 @@ public class Dipendente {
     private String cognome;
 
     @Email(message = "Email non valida.")
-    @NotBlank(message ="Inserisci una email nel campo.")
+    @NotBlank(message = "Inserisci una email nel campo.")
     private String email;
 
     private String avatar;
 
-    public Dipendente(String avatar, String email, String cognome, String name, String username) {
-        this.avatar = avatar;
+    public Dipendente(String email, String cognome, String name, String username) {
         this.email = email;
         this.cognome = cognome;
         this.name = name;
