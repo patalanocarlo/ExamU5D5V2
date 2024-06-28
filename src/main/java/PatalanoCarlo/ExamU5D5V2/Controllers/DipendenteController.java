@@ -38,7 +38,7 @@ public class DipendenteController {
     }
 
     @PostMapping
-    public Dipendente createDipendente(@RequestBody Dipendente dipendente) {
+    public Dipendente createDipendente(@RequestBody @Validated Dipendente dipendente) {
         return dipendenteService.createDipendente(dipendente);
     }
 

@@ -13,7 +13,7 @@ public class BadRequestException extends RuntimeException {
     }
 
     public BadRequestException(List<ObjectError> errorsList) {
-        super("Validation errors");
+        super("Errore di validazione");
         this.errorsList = errorsList;
     }
 
